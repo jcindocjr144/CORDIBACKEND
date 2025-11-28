@@ -1,13 +1,13 @@
 import mysql from "mysql2";
 
 const db = mysql.createPool({
-  host: "auth-db1151.hstgr.io",       
-  user: "u987792045_root",        
-  password: "Cordi@2025",    
-  database: "u987792045_chatbotdb",
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
   waitForConnections: true,
   connectionLimit: 10,
-  queueLimit: 0
+  queueLimit: 0,
 });
 
 export default db.promise();
