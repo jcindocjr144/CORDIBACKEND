@@ -1,7 +1,7 @@
 import mysql from "mysql2";
 
 const db = mysql.createPool({
-  host: "cordichatbot.org",       
+  host: "auth-db1151.hstgr.io",       
   user: "u987792045_root",        
   password: "Cordi@2025",    
   database: "u987792045_chatbotdb",
