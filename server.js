@@ -244,6 +244,9 @@ app.get("/api/fetchMessages", async (req, res) => {
     res.status(500).json({ error: "Database error" });
   }
 });
+app.get("/", (req, res) => {
+  res.send("✅ Cordi Chatbot backend is running");
+});
 
 app.listen(PORT, () => {
   console.log(`✅ Cordi Chatbot backend running on port ${PORT}`);
