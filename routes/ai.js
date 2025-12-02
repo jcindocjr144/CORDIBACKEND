@@ -17,6 +17,7 @@ router.post("/", async (req, res) => {
 
   try {
     const [trainingRows] = await db.query("SELECT question, answer FROM training");
+
     const trainingContent = trainingRows
       .map((t, index) => `Q${index + 1}: ${t.question}\nA${index + 1}: ${t.answer}`)
       .join("\n\n");
