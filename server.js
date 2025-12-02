@@ -8,6 +8,7 @@ import messagesRoutes from "./routes/messages.js";
 import userMessages from "./routes/userMessages.js";
 import fetchMessagesRoutes from "./routes/fetchMessages.js";
 import autoResponsesRoutes from "./routes/autoResponses.js";
+import trainingRouter from "./routes/trainingRoutes.js";
 import aiRouter from "./routes/ai.js";
 import authRoutes from "./routes/auth.js";
 dotenv.config();
@@ -38,6 +39,7 @@ app.use("/api/messages", messagesRoutes);
 app.use("/api/userMessages", userMessages);
 app.use("/api/fetchMessages", fetchMessagesRoutes);
 app.use("/api/auto-responses", autoResponsesRoutes);
+app.use("/api/training", trainingRouter);
 app.use("/api/ai", aiRouter);
 app.use("/api/auth", authRoutes);
 
